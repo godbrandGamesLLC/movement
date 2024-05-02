@@ -1,17 +1,45 @@
-public float panSpeed = 20f;
+//Absolute beginning of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
 
-	void Update () {
-		Vector3 pos = transform.position;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-		if (Input.GetKey ("w")) {
-			pos.z += speed * Time.deltaTime;
-		}
-		if (Input.GetKey ("s")) {
-			pos.z -= speed * Time.deltaTime;
-		}
-		if (Input.GetKey ("d")) {
-			pos.x += speed * Time.deltaTime;
-		}
-		if (Input.GetKey ("a")) {
-			pos.x -= speed * Time.deltaTime;
-		}
+public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+{//beg of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+
+    public float speed_Running = 20f;
+
+   
+    // Update is called once per frame
+    void Update()
+    {//beginning of void update
+
+        Vector3 pos = transform.position;
+
+        if (Input.GetKey("w"))
+        {
+            pos.z += speed_Running * Time.deltaTime;
+        }
+        if (Input.GetKey("s"))
+        {
+            pos.z -= speed_Running * Time.deltaTime;
+        }
+        if (Input.GetKey("d"))
+        {
+            pos.x += speed_Running * Time.deltaTime;
+        }
+        if (Input.GetKey("a"))
+        {
+            pos.x -= speed_Running * Time.deltaTime;
+        }
+
+
+        transform.position = pos;
+
+    }//end of void update
+
+
+}//end of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+
+//Absolute end of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+
