@@ -35,33 +35,33 @@ public class keyboard_Mercury : MonoBehaviour
     {//beg of void move_Player()
 
         if (Input.GetKey(KeyCode.UpArrow))
-        {//b of if (Input.GetKey(KeyCode.RightArrow))
+        {
 
             player_1.transform.Translate(Vector3.forward * Time.deltaTime * speed_Player_1);
 
-        }//e of if (Input.GetKey(KeyCode.RightArrow))
+        }
 
         if (Input.GetKey(KeyCode.DownArrow))
-        {//b of if (Input.GetKey(KeyCode.RightArrow))
+        {
 
             player_1.transform.Translate(Vector3.back * Time.deltaTime * speed_Player_1);
 
-        }//e of if (Input.GetKey(KeyCode.RightArrow))
+        }
 
         //if (Input.GetKey(KeyCode.UpArrow))
         if (Input.GetKey(KeyCode.LeftArrow))
-        {//b of if (Input.GetKey(KeyCode.RightArrow))
+        {
 
             player_1.transform.Translate(Vector3.left * Time.deltaTime * speed_Player_1);
 
-        }//e of if (Input.GetKey(KeyCode.RightArrow))
+        }
 
         if (Input.GetKey(KeyCode.RightArrow))
-        {//b of if (Input.GetKey(KeyCode.RightArrow))
+        {
 
             player_1.transform.Translate(Vector3.right * Time.deltaTime * speed_Player_1);
 
-        }//e of if (Input.GetKey(KeyCode.RightArrow))
+        }
 
     }//end of void move_Player()
 
