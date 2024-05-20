@@ -1,45 +1,72 @@
-//Absolute beginning of script_KeyboardMovement_BallCarrier script
+//ultimate beginning of keyboard_Mercury script
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_KeyboardMovement_BallCarrier : MonoBehaviour
-{//beg of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+public class keyboard_Mercury : MonoBehaviour
+{//beg of public class keyboard_Mercury
 
-    public float speed_Running = 20f;
+    //----beg of variables
+    public GameObject player_1;
 
-   
+    public float speed_Player_1 = 33f;
+    //----end of variables
+
+
+    // Start is called before the first frame update
+    void Start()
+    {//Beginning of Start function
+
+
+
+    }//End of start function
+
     // Update is called once per frame
     void Update()
     {//beginning of void update
 
-        Vector3 pos = transform.position;
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            pos.z += speed_Running * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            pos.z -= speed_Running * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            pos.x += speed_Running * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            pos.x -= speed_Running * Time.deltaTime;
-        }
-
-
-        transform.position = pos;
+        move_Player();
 
     }//end of void update
 
 
-}//end of public class script_KeyboardMovement_BallCarrier : MonoBehaviour
+    void move_Player()
+    {//beg of void move_Player()
 
-//Absolute end of script_KeyboardMovement_BallCarrier script
+        if (Input.GetKey(KeyCode.UpArrow))
+        {//b of if (Input.GetKey(KeyCode.RightArrow))
+
+            player_1.transform.Translate(Vector3.forward * Time.deltaTime * speed_Player_1);
+
+        }//e of if (Input.GetKey(KeyCode.RightArrow))
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {//b of if (Input.GetKey(KeyCode.RightArrow))
+
+            player_1.transform.Translate(Vector3.back * Time.deltaTime * speed_Player_1);
+
+        }//e of if (Input.GetKey(KeyCode.RightArrow))
+
+        //if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {//b of if (Input.GetKey(KeyCode.RightArrow))
+
+            player_1.transform.Translate(Vector3.left * Time.deltaTime * speed_Player_1);
+
+        }//e of if (Input.GetKey(KeyCode.RightArrow))
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {//b of if (Input.GetKey(KeyCode.RightArrow))
+
+            player_1.transform.Translate(Vector3.right * Time.deltaTime * speed_Player_1);
+
+        }//e of if (Input.GetKey(KeyCode.RightArrow))
+
+    }//end of void move_Player()
+
+
+}//end of public class keyboard_Mercury
+
+//ultimate end of keyboard_Mercury script
 
